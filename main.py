@@ -67,4 +67,4 @@ with st.container():
             elif "ALVENARIAS" in service:
                 arquivo_cvs = alvenaria(dados=dados, p_mo=p_mo)
                 
-        st.download_button(label='Baixar arquivo', data=arquivo_cvs.to_csv(sep=';', index=False).encode('utf-8'), file_name='novo_arquivo.csv', mime='text/csv')
+        st.download_button(label='Baixar arquivo', data=arquivo_cvs.to_csv(sep=';', index=False, encoding='utf-8-sig'), file_name='novo_arquivo.csv', mime='text/csv')
